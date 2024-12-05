@@ -132,7 +132,13 @@ class Game:
             print("=====================")
 
             input("\nPress Enter to continue...")
-            choice = input("Choose (1 - Normal Attack, 2 - Special Attack, 3 - Defend, 4 - Save and Quit): ")
+            print("""
+    [1] 💥 Normal Attack
+    [2] ✨ Special Attack
+    [3] 🛡️ Defend
+    [4] 💾 Save and Quit
+""")
+            choice = input("Choose an action (1-4): ")
 
             if choice == '1':
                 self.hero.attack(self.enemy)
