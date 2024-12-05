@@ -65,9 +65,25 @@ class Enemy(Character):
 class Game:
     """Orchestrates the game mechanics"""
     def __init__(self):
+        self.show_title()
         hero_name = input("Enter your hero's name: ")
         self.hero = Hero(name=hero_name, health=100, level=5, skill="Super Strength")
         self.enemy = self.create_random_enemy()
+
+    def show_title(self):
+        """Displays the game title"""
+        print("=" * 40)
+        print("        Welcome to DODUO RPG!")
+        print("=" * 40)
+        print("""
+  ██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗ 
+  ██   ██╗██╔═══██╗██╔══██╗██║   ██║██╔═══██╗
+  ██   ██║██║   ██║██   ██╝██║   ██║██║   ██║
+  ██   ██║██║   ██║██   ██ ██║   ██║██║   ██║
+  █████╔╝ ╚██████╔╝█████╔╝ ╚██████╔╝╚██████╔╝
+  ╚════╝   ╚═════╝ ╚════╝   ╚═════╝  ╚═════╝ 
+        """)
+        print("=" * 40)
 
     def create_random_enemy(self):
         enemy_types = [
